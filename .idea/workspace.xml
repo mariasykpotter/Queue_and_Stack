@@ -7,21 +7,11 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/collections/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/collections/Stack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/collections/immutable/ImmutableArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/collections/immutable/ImmutableArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/collections/immutable/ImmutableLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/collections/immutable/ImmutableLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/collections/immutable/ImmutableList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ua/edu/ucu/collections/immutable/ImmutableList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ua/edu/ucu/collections/QueueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/edu/ucu/collections/QueueTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ua/edu/ucu/collections/StackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/edu/ucu/collections/StackTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ua/edu/ucu/collections/immutable/ImmutableArrayListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/edu/ucu/collections/immutable/ImmutableArrayListTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ua/edu/ucu/collections/immutable/ImmutableLinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/edu/ucu/collections/immutable/ImmutableLinkedListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/edu/ucu/collections/Queue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/edu/ucu/collections/Stack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/edu/ucu/collections/immutable/ImmutableArrayList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/edu/ucu/collections/immutable/ImmutableLinkedList$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/edu/ucu/collections/immutable/ImmutableLinkedList$Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/edu/ucu/collections/immutable/ImmutableLinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ua/edu/ucu/collections/immutable/ImmutableList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ua/edu/ucu/collections/QueueTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ua/edu/ucu/collections/StackTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ua/edu/ucu/collections/immutable/ImmutableArrayListTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ua/edu/ucu/collections/immutable/ImmutableLinkedListTest.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +47,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.QueueTest.TestQueueError">
+  <component name="RunManager" selected="JUnit.ImmutableLinkedListTest">
+    <configuration name="ImmutableLinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ImmutableCollections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.edu.ucu.collections.immutable.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ua.edu.ucu.collections.immutable" />
+      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.collections.immutable.ImmutableLinkedListTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="QueueTest.TestQueueError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ImmutableCollections" />
       <extension name="coverage">
@@ -85,22 +90,6 @@
       <option name="PACKAGE_NAME" value="ua.edu.ucu.collections" />
       <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.collections.QueueTest" />
       <option name="METHOD_NAME" value="test1" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="QueueTest.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ImmutableCollections" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ua.edu.ucu.collections.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ua.edu.ucu.collections" />
-      <option name="MAIN_CLASS_NAME" value="ua.edu.ucu.collections.QueueTest" />
-      <option name="METHOD_NAME" value="test2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ImmutableLinkedListTest" />
         <item itemvalue="JUnit.QueueTest.TestQueueError" />
         <item itemvalue="JUnit.StackTest.TestStackError" />
         <item itemvalue="JUnit.StackTest.test1" />
         <item itemvalue="JUnit.QueueTest.test1" />
-        <item itemvalue="JUnit.QueueTest.test2" />
       </list>
     </recent_temporary>
   </component>
@@ -163,6 +152,7 @@
       <workItem from="1572614981697" duration="28255000" />
       <workItem from="1572725282020" duration="351000" />
       <workItem from="1572763218541" duration="5596000" />
+      <workItem from="1572803978392" duration="403000" />
     </task>
     <servers />
   </component>

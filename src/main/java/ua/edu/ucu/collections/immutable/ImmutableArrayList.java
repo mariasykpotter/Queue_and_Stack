@@ -9,8 +9,8 @@ public class ImmutableArrayList implements ImmutableList {
         arr = new Object[0];
     }
 
-    public ImmutableArrayList(Object[] given_array) {
-        arr = given_array.clone();
+    public ImmutableArrayList(Object[] givenArray) {
+        arr = givenArray.clone();
     }
 
     @Override
@@ -23,7 +23,8 @@ public class ImmutableArrayList implements ImmutableList {
         if (0 <= index && index <= arr.length) {
             Object[] newArray = new Object[arr.length + 1];
             System.arraycopy(arr, 0, newArray, 0, index);
-            System.arraycopy(arr, index, newArray, index + 1, arr.length - index);
+            System.arraycopy(arr, index,
+                    newArray, index + 1, arr.length - index);
             newArray[index] = e;
             return new ImmutableArrayList(newArray);
         }
@@ -42,7 +43,8 @@ public class ImmutableArrayList implements ImmutableList {
             Object[] newArray = new Object[arr.length + c.length];
             System.arraycopy(arr, 0, newArray, 0, index);
             System.arraycopy(c, 0, newArray, index, c.length);
-            System.arraycopy(arr, index, newArray, index + c.length, arr.length - index);
+            System.arraycopy(arr, index, newArray,
+                    index + c.length, arr.length - index);
             return new ImmutableArrayList(newArray);
         }
         throw new IndexOutOfBoundsException();
@@ -61,7 +63,8 @@ public class ImmutableArrayList implements ImmutableList {
         if (0 <= index && index < arr.length) {
             Object[] newArray = new Object[arr.length - 1];
             System.arraycopy(arr, 0, newArray, 0, index);
-            System.arraycopy(arr, index + 1, newArray, index, arr.length - index - 1);
+            System.arraycopy(arr, index + 1,
+                    newArray, index, arr.length - index - 1);
             return new ImmutableArrayList(newArray);
         }
         throw new IndexOutOfBoundsException();

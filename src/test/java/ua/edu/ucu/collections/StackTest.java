@@ -36,8 +36,9 @@ public class StackTest {
             assertEquals(stack.pop(), elements[i]);
         }
     }
+
     @Test(expected = IndexOutOfBoundsException.class)
-    public void TestStackError(){
+    public void TestStackError() {
         stack.pop();
     }
 

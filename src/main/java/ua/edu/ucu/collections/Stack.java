@@ -3,24 +3,24 @@ package ua.edu.ucu.collections;
 import ua.edu.ucu.collections.immutable.ImmutableLinkedList;
 
 public class Stack {
-    private ImmutableLinkedList LinkedList;
+    private ImmutableLinkedList linkedList;
 
     public Stack() {
-        LinkedList = new ImmutableLinkedList();
+        linkedList = new ImmutableLinkedList();
     }
 
     Object peek() {
-        return LinkedList.getFirst();
+        return linkedList.getFirst();
     }
 
     Object pop() {
-        Object firstEl = LinkedList.getFirst();
-        LinkedList = LinkedList.removeFirst();
+        Object firstEl = Linkedlist.getFirst();
+        linkedList = linkedList.removeFirst();
         return firstEl;
     }
 
     void push(Object e) {
-        LinkedList = LinkedList.addFirst(e);
+        linkedList = linkedList.addFirst(e);
     }
 
 }

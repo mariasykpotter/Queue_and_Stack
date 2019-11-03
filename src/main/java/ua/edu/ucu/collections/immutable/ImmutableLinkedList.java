@@ -71,7 +71,7 @@ public class ImmutableLinkedList implements ImmutableList {
             Node after = newLinkedList.getByIndex(index);
             before.next = new Node(e, after);
         } else {
-            newLinkedList.head = new Node(e,newLinkedList.head);
+            newLinkedList.head = new Node(e, newLinkedList.head);
         }
         newLinkedList.size += 1;
         return newLinkedList;
@@ -108,7 +108,7 @@ public class ImmutableLinkedList implements ImmutableList {
                 curNode.next = new Node(el, curNode.next);
                 curNode = curNode.next;
             }
-            if (after!=null) {
+            if (after != null) {
                 curNode.next = new Node(after.val, after.next);
             }
         }
@@ -178,7 +178,7 @@ public class ImmutableLinkedList implements ImmutableList {
         Object[] newArray = new Object[size];
         int currentPos = 0;
         Node curNode = head;
-        while (curNode != null){
+        while (curNode != null) {
             newArray[currentPos] = curNode.val;
             curNode = curNode.next;
             currentPos++;
@@ -191,27 +191,33 @@ public class ImmutableLinkedList implements ImmutableList {
         String str = Arrays.toString(toArray());
         return str.substring(1, str.length() - 1);
     }
+
     //додає елемент у початок зв'язаного списку
-    public ImmutableLinkedList addFirst(Object e){
-        return add(0,e);
+    public ImmutableLinkedList addFirst(Object e) {
+        return add(0, e);
     }
+
     //додає елемент у кінець зв'язаного списку
     public ImmutableLinkedList addLast(Object e) {
         return add(e);
     }
-    public Object getFirst(){
+
+    public Object getFirst() {
         return get(0);
     }
-    public Object getLast(){
-        return get(size-1);
+
+    public Object getLast() {
+        return get(size - 1);
     }
+
     //видаляє перший елемент
-    public ImmutableLinkedList removeFirst(){
+    public ImmutableLinkedList removeFirst() {
         return remove(0);
     }
+
     //видаляє останній елемент
     public ImmutableLinkedList removeLast() {
-        return remove(size-1);
+        return remove(size - 1);
     }
 }
 

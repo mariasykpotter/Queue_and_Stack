@@ -2,7 +2,7 @@ package ua.edu.ucu.collections.immutable;
 
 import java.util.Arrays;
 
-public class ImmutableLinkedList implements ImmutableList {
+final public class ImmutableLinkedList implements ImmutableList {
     private int size;
     private Node head;
 
@@ -38,17 +38,17 @@ public class ImmutableLinkedList implements ImmutableList {
         size = arr.length;
     }
 
-    public ImmutableLinkedList copy() {
+    private ImmutableLinkedList copy() {
         if (size > 0) {
             ImmutableLinkedList lst = new ImmutableLinkedList();
-            lst.head = head;
-            Node currentNode = head.next;
-            Node curNode = lst.head;
             lst.size = size;
-            while (currentNode != null) {
-                curNode.next = new Node(currentNode.val);
-                currentNode = currentNode.next;
-                curNode = curNode.next;
+            lst.head = new Node(head.val);
+            Node current = head.next;
+            Node newCurr = lst.head;
+            while (current != null) {
+                newCurr.next = new Node(current.val);
+                newCurr = newCurr.next;
+                current = current.next;
             }
             return lst;
         }
@@ -62,10 +62,10 @@ public class ImmutableLinkedList implements ImmutableList {
 
     @Override
     public ImmutableLinkedList add(int index, Object e) {
+        ImmutableLinkedList newLinkedList = copy();
         if (index < 0 || index > size) {
             throw new IndexOutOfBoundsException();
         }
-        ImmutableLinkedList newLinkedList = copy();
         if (index > 0) {
             Node before = newLinkedList.getByIndex(index - 1);
             Node after = newLinkedList.getByIndex(index);
@@ -123,6 +123,7 @@ public class ImmutableLinkedList implements ImmutableList {
 
     @Override
     public ImmutableLinkedList remove(int index) {
+        Node cur = head;
         ImmutableLinkedList newLinkedList = copy();
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
@@ -134,6 +135,11 @@ public class ImmutableLinkedList implements ImmutableList {
             before.next = before.next.next;
         }
         newLinkedList.size--;
+//        cur = head;
+//        while (cur != null) {
+//            System.out.println(cur.val);
+//            cur = cur.next;
+//        }
         return newLinkedList;
     }
 
@@ -149,7 +155,7 @@ public class ImmutableLinkedList implements ImmutableList {
         Node curNode = head;
         int count = 0;
         while (curNode != null) {
-            if (curNode.val == e) {
+            if (curNode.val.equals(e)) {
                 return count;
             }
             curNode = curNode.next;

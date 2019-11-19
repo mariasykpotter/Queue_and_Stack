@@ -2,7 +2,7 @@ package ua.edu.ucu.collections.immutable;
 
 import java.util.Arrays;
 
-public class ImmutableArrayList implements ImmutableList {
+final public class ImmutableArrayList implements ImmutableList {
     private Object[] arr;
 
     public ImmutableArrayList() {
@@ -83,7 +83,7 @@ public class ImmutableArrayList implements ImmutableList {
     @Override
     public int indexOf(Object e) {
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == e) {
+            if (arr[i].equals(e)) {
                 return i;
             }
         }
